@@ -1,6 +1,6 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
 import fs from 'fs';
-
+import readline from 'readline';
 abstract class AutomationTestSetup {
     async initializer(url: string, waitInitialContainer?: string): Promise<{ page: Page; browser: Browser }> {
         const browser = await puppeteer.launch({ headless: false, defaultViewport: null, args: ['--start-maximized'] });

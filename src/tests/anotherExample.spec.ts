@@ -14,6 +14,7 @@ class AnotherExampleSpec extends AutomationTestSetup {
             (inp as HTMLInputElement).value = 'Another test =)'
             console.log(inp)
         })
+        await this.readConsole('hello')
     }
     
 }
