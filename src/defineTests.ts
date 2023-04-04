@@ -1,6 +1,6 @@
-import { Browser, Page } from "puppeteer";
 import AnotherExampleSpec from "./tests/anotherExample.spec";
 import ExampleSpec from "./tests/example.spec";
+import {DefinedTest} from '../bootstrap/definedTests.types';
 
 const definedTests : DefinedTest[] = [
     {
