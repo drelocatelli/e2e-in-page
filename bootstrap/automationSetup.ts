@@ -12,7 +12,6 @@ abstract class AutomationTestSetup {
     }
     
     async open(page: Page, url: string, waitInitialContainer?: string) {
-        const port = process.env.PORT ?? 3000;
         await page.goto(url);
         if(waitInitialContainer) {
             await page.waitForSelector(waitInitialContainer);

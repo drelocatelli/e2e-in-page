@@ -9,12 +9,10 @@ class AnotherExampleSpec extends AutomationTestSetup {
     }
 
     async assert(page: Page) {
-        const input = await page.waitForSelector('input');
-        input?.evaluate(inp => {
-            (inp as HTMLInputElement).value = 'Another test =)'
-            console.log(inp)
-        })
-        await this.readConsole('hello')
+        const confirm = await this.readDialog(page, 'hello', 'confirm');
+        if(confirm) {
+            await page.goto('http://youtube.com');
+        }
     }
     
 }
